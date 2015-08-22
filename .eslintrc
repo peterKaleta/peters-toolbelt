@@ -5,9 +5,6 @@
     "es6": true
   },
   "parser": "babel-eslint",
-  "plugins": [
-     "react"
-   ],
   "globals": {
     "describe": true,
     "it": true,
@@ -68,7 +65,7 @@
     "quotes": [1, "single"],
     "one-var": [1, "never"],
     "no-trailing-spaces": 1,
-    "no-space-before-semi": 1,
+    "semi-spacing": 1,
     "no-multiple-empty-lines": 1,
     "no-mixed-spaces-and-tabs": 1,
     "key-spacing": [1, {
