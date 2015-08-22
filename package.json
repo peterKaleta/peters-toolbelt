@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/peterKaleta/peters-toolbelt#readme",
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "webpack": "^1.11.0"
   },
   "devDependencies": {
     "babel-eslint": "^4.0.10",
+    "eslint": "^1.2.1",
     "html-webpack-plugin": "^1.6.1",
     "path": "^0.11.14"
   }
