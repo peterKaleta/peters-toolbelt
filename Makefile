@@ -1,4 +1,4 @@
-.PHONY: clean build install dev lint lint-quiet test-server test
+.PHONY: clean build init setup-hooks lint test test-watch
 
 clean:
 	rm -rf ./dist
