@@ -6,6 +6,6 @@ export $( cat .env-production|xargs)
   --devtool eval \
   --progress \
   --display-chunks \
-  --content-base build \
+  --content-base dist \
   --optimize-occurence-order \
   --bail

@@ -3,18 +3,16 @@ var path = require('path');
 
 module.exports = {
     entry: {
-      'tools': './tools',
-      'vendors': [
-        'webpack'
-      ]
+      'tools': './tools'
     },
     output: {
-      path: path.join(__dirname, '/tools-dist'),
+      path: path.join(__dirname, '/dist'),
       filename: 'index.js'
     },
     module: {
       loaders: [
-        { test: /\.js$/, exclude: /node_modules/, loader: 'babel?stage=0'}
+        { test: /\.js$/, exclude: /node_modules/, loader: 'babel?stage=0' },
+        { test: /\.json$/, exclude: /node_modules/, loader: 'json' }
       ]
     },
     plugins: [
