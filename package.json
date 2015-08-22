@@ -1,0 +1,27 @@
+{
+  "name": "peters-toolbelt",
+  "version": "0.0.0",
+  "description": "some common configurations",
+  "main": "tools-dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterKaleta/peters-toolbelt.git"
+  },
+  "author": "mail@peterkaleta.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterKaleta/peters-toolbelt/issues"
+  },
+  "homepage": "https://github.com/peterKaleta/peters-toolbelt#readme",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.0.10",
+    "html-webpack-plugin": "^1.6.1",
+    "path": "^0.11.14"
+  }
+}
