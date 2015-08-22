@@ -19,3 +19,9 @@ build:
 
 lint:
 	./scripts/lint.sh
+
+test:
+	./scripts/test.sh
+
+test-watch:
+	./scripts/test.watch.sh
