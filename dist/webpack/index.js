@@ -84,6 +84,11 @@ var WebpackConf = (function () {
       return this.addLoaders(_loaders2['default'].images);
     }
   }, {
+    key: 'iNeedInlineSVGs',
+    value: function iNeedInlineSVGs() {
+      return this.addLoaders(_loaders2['default'].inlineSVG);
+    }
+  }, {
     key: 'getConfig',
     value: function getConfig() {
       var conf = _lodash2['default'].merge(this.config, this.userConfig);

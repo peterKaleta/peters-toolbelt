@@ -55,6 +55,10 @@ class WebpackConf {
       return this.addLoaders(loaders.images);
     }
 
+    iNeedInlineSVGs() {
+      return this.addLoaders(loaders.inlineSVG);
+    }
+
     getConfig() {
       let conf = _.merge(this.config, this.userConfig);
       conf.plugins.push(new webpack.NoErrorsPlugin());

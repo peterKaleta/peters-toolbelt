@@ -26,11 +26,16 @@ var _images = require('./images');
 
 var _images2 = _interopRequireDefault(_images);
 
+var _inlineSVG = require('./inlineSVG');
+
+var _inlineSVG2 = _interopRequireDefault(_inlineSVG);
+
 exports['default'] = {
   reactES7: _reactES72['default'],
   bootstrap: _bootstrap2['default'],
   SCSS: _scss2['default'],
   ES7: _ES72['default'],
-  images: _images2['default']
+  images: _images2['default'],
+  inlingeSVG: _inlineSVG2['default']
 };
 module.exports = exports['default'];
