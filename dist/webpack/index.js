@@ -81,7 +81,7 @@ var WebpackConf = (function () {
   }, {
     key: 'getConfig',
     value: function getConfig() {
-      return _lodash2['default'].defaultsDeep(this.userConfig, this.userConfig);
+      return _lodash2['default'].defaultsDeep(this.userConfig, this.config);
     }
   }]);
 
