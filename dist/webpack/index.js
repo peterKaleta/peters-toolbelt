@@ -31,13 +31,14 @@ var WebpackConf = (function () {
         path: 'dist',
         filename: 'bundle.js'
       },
+      loaders: {},
       node: {
         net: 'empty',
         tls: 'empty',
         dns: 'empty',
         fs: 'empty'
       },
-      plugins: []
+      plugins: [new _webpack2['default'].NoErrorsPlugin()]
     };
 
     this.userConfig = config;
@@ -66,11 +67,6 @@ var WebpackConf = (function () {
     value: function iNeedBootstrap() {
       this.config.loaders.concat(_loaders2['default'].bootstrap);
       return this;
-    }
-  }, {
-    key: 'addPlugins',
-    value: function addPlugins(plugins) {
-      this.conf.plugins.concat(plugins);
     }
   }, {
     key: 'getConfig',
