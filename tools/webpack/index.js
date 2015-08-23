@@ -33,7 +33,7 @@ class WebpackConf {
     }
 
     addPlugins(plugins) {
-      this.config.module.plugins = this.config.module.plugins.concat(plugins);
+      this.config.plugins = this.config.plugins.concat(plugins);
       return this;
     }
 
@@ -54,7 +54,7 @@ class WebpackConf {
     }
 
     getConfig() {
-       return _.defaultsDeep(this.userConfig, this.config);
+       return _.merge(this.config, this.userConfig);
     }
 
 }

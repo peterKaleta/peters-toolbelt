@@ -55,7 +55,7 @@ var WebpackConf = (function () {
   }, {
     key: 'addPlugins',
     value: function addPlugins(plugins) {
-      this.config.module.plugins = this.config.module.plugins.concat(plugins);
+      this.config.plugins = this.config.plugins.concat(plugins);
       return this;
     }
   }, {
@@ -81,7 +81,7 @@ var WebpackConf = (function () {
   }, {
     key: 'getConfig',
     value: function getConfig() {
-      return _lodash2['default'].defaultsDeep(this.userConfig, this.config);
+      return _lodash2['default'].merge(this.config, this.userConfig);
     }
   }]);
 
