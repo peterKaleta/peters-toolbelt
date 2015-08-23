@@ -1,6 +1,6 @@
-import _ from 'lodash';
 import loaders from './loaders';
 import webpack from 'webpack';
+import _ from 'lodash';
 
 class WebpackConf {
 
@@ -29,6 +29,11 @@ class WebpackConf {
 
     addLoaders(loaders) {
       this.config.module.loaders = this.config.module.loaders.concat(loaders);
+      return this;
+    }
+
+    addPlugins(plugins) {
+      this.config.module.plugins = this.config.module.plugins.concat(plugins);
       return this;
     }
 

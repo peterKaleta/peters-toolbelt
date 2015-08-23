@@ -10,10 +10,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var _lodash = require('lodash');
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
 var _loaders = require('./loaders');
 
 var _loaders2 = _interopRequireDefault(_loaders);
@@ -21,6 +17,10 @@ var _loaders2 = _interopRequireDefault(_loaders);
 var _webpack = require('webpack');
 
 var _webpack2 = _interopRequireDefault(_webpack);
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
 
 var WebpackConf = (function () {
   function WebpackConf(config) {
@@ -50,6 +50,12 @@ var WebpackConf = (function () {
     key: 'addLoaders',
     value: function addLoaders(loaders) {
       this.config.module.loaders = this.config.module.loaders.concat(loaders);
+      return this;
+    }
+  }, {
+    key: 'addPlugins',
+    value: function addPlugins(plugins) {
+      this.config.module.plugins = this.config.module.plugins.concat(plugins);
       return this;
     }
   }, {
