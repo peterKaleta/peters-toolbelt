@@ -36,6 +36,6 @@ exports['default'] = {
   SCSS: _scss2['default'],
   ES7: _ES72['default'],
   images: _images2['default'],
-  inlingeSVG: _inlineSVG2['default']
+  inlineSVG: _inlineSVG2['default']
 };
 module.exports = exports['default'];

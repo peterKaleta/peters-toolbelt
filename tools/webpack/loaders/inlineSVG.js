@@ -1,4 +1,6 @@
-export default [{
-  test: /\.svg$/,
-  loader: 'svg-inline'
-}];
+export default [
+  {
+    test: /\.svg$/,
+    loader: 'svg-inline'
+  }
+];
