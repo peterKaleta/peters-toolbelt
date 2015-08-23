@@ -22,9 +22,7 @@ class WebpackConf {
         dns: 'empty',
         fs: 'empty'
       },
-      plugins: [
-        new webpack.NoErrorsPlugin()
-      ]
+      plugins: []
     }
 
     addLoaders(loaders) {
@@ -54,7 +52,9 @@ class WebpackConf {
     }
 
     getConfig() {
-       return _.merge(this.config, this.userConfig);
+      let conf = _.merge(this.config, this.userConfig);
+      conf.plugins.push(new webpack.NoErrorsPlugin());
+      return conf;
     }
 
 }

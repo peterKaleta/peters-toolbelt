@@ -40,7 +40,7 @@ var WebpackConf = (function () {
         dns: 'empty',
         fs: 'empty'
       },
-      plugins: [new _webpack2['default'].NoErrorsPlugin()]
+      plugins: []
     };
 
     this.userConfig = config;
@@ -81,7 +81,9 @@ var WebpackConf = (function () {
   }, {
     key: 'getConfig',
     value: function getConfig() {
-      return _lodash2['default'].merge(this.config, this.userConfig);
+      var conf = _lodash2['default'].merge(this.config, this.userConfig);
+      conf.plugins.push(new _webpack2['default'].NoErrorsPlugin());
+      return conf;
     }
   }]);
 
