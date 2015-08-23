@@ -79,6 +79,11 @@ var WebpackConf = (function () {
       return this.addLoaders(_loaders2['default'].bootstrap);
     }
   }, {
+    key: 'iNeedImages',
+    value: function iNeedImages() {
+      return this.addLoaders(_loaders2['default'].images);
+    }
+  }, {
     key: 'getConfig',
     value: function getConfig() {
       var conf = _lodash2['default'].merge(this.config, this.userConfig);

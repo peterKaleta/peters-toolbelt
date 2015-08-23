@@ -51,6 +51,10 @@ class WebpackConf {
       return this.addLoaders(loaders.bootstrap);
     }
 
+    iNeedImages() {
+      return this.addLoaders(loaders.images);
+    }
+
     getConfig() {
       let conf = _.merge(this.config, this.userConfig);
       conf.plugins.push(new webpack.NoErrorsPlugin());

@@ -22,10 +22,15 @@ var _ES7 = require('./ES7');
 
 var _ES72 = _interopRequireDefault(_ES7);
 
+var _images = require('./images');
+
+var _images2 = _interopRequireDefault(_images);
+
 exports['default'] = {
   reactES7: _reactES72['default'],
   bootstrap: _bootstrap2['default'],
   SCSS: _scss2['default'],
-  ES7: _ES72['default']
+  ES7: _ES72['default'],
+  images: _images2['default']
 };
 module.exports = exports['default'];
