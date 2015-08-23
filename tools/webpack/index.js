@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import webpack from 'webpack';
 import loaders from './loaders';
 
 class WebpackConf {
@@ -20,7 +19,6 @@ class WebpackConf {
         fs: 'empty'
       },
       plugins: [
-        new webpack.NoErrorsPlugin()
       ]
     }
 
@@ -42,6 +40,10 @@ class WebpackConf {
     iNeedBootstrap() {
       this.config.loaders.concat(loaders.bootstrap);
       return this;
+    }
+
+    addPlugins(plugins){
+      this.conf.plugins.concat(plugins);
     }
 
     getConfig() {

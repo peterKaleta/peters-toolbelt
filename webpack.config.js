@@ -3,7 +3,7 @@ var path = require('path');
 
 module.exports = {
     entry: {
-      'tools': './tools'
+      'tools': './tools/'
     },
     output: {
       path: path.join(__dirname, '/dist'),
@@ -11,10 +11,10 @@ module.exports = {
     },
     module: {
       loaders: [
-        { test: /\.js$/, exclude: /node_modules/, loader: 'babel?stage=0' },
-        { test: /\.json$/, exclude: /node_modules/, loader: 'json' }
+        { test: /\.js$/, exclude: /node_modules/, loader: 'babel?stage=0' }
       ]
     },
+
     plugins: [
       new webpack.NoErrorsPlugin()
     ],
