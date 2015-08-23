@@ -54,7 +54,7 @@ class WebpackConf {
     }
 
     getConfig() {
-       return _.merge(this.config, this.userConfig);
+       return _.defaultsDeep(this.userConfig, this.userConfig);
     }
 
 }
