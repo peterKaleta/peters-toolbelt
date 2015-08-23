@@ -13,6 +13,8 @@ class WebpackConf {
         path: 'dist',
         filename: 'bundle.js'
       },
+      loaders: {      
+      },
       node: {
         net: 'empty',
         tls: 'empty',
@@ -20,6 +22,7 @@ class WebpackConf {
         fs: 'empty'
       },
       plugins: [
+        new webpack.NoErrorsPlugin()
       ]
     }
 
@@ -41,10 +44,6 @@ class WebpackConf {
     iNeedBootstrap() {
       this.config.loaders.concat(loaders.bootstrap);
       return this;
-    }
-
-    addPlugins(plugins){
-      this.conf.plugins.concat(plugins);
     }
 
     getConfig() {
