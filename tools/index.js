@@ -1,4 +1,5 @@
 import webpack from './webpack';
-export default {
+
+module.exports = {
   webpack
 };

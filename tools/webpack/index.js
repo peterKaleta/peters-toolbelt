@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import loaders from './loaders';
+import webpack from 'webpack';
 
 class WebpackConf {
 
