@@ -13,7 +13,8 @@ class WebpackConf {
         path: 'dist',
         filename: 'bundle.js'
       },
-      loaders: {      
+      module: {
+        loaders: []
       },
       node: {
         net: 'empty',
@@ -27,22 +28,22 @@ class WebpackConf {
     }
 
     iNeedES7() {
-      this.config.loaders.concat(loaders.ES7);
+      this.config.module.loaders.concat(loaders.ES7);
       return this;
     }
 
     iNeedSCSS() {
-      this.config.loaders.concat(loaders.SCSS);
+      this.config.module.loaders.concat(loaders.SCSS);
       return this;
     }
 
     iNeedReact() {
-      this.config.loaders.concat(loaders.reactES7);
+      this.config.module.loaders.concat(loaders.reactES7);
       return this;
     }
 
     iNeedBootstrap() {
-      this.config.loaders.concat(loaders.bootstrap);
+      this.config.module.loaders.concat(loaders.bootstrap);
       return this;
     }
 

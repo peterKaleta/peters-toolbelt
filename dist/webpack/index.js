@@ -31,7 +31,9 @@ var WebpackConf = (function () {
         path: 'dist',
         filename: 'bundle.js'
       },
-      loaders: {},
+      module: {
+        loaders: []
+      },
       node: {
         net: 'empty',
         tls: 'empty',
@@ -47,25 +49,25 @@ var WebpackConf = (function () {
   _createClass(WebpackConf, [{
     key: 'iNeedES7',
     value: function iNeedES7() {
-      this.config.loaders.concat(_loaders2['default'].ES7);
+      this.config.module.loaders.concat(_loaders2['default'].ES7);
       return this;
     }
   }, {
     key: 'iNeedSCSS',
     value: function iNeedSCSS() {
-      this.config.loaders.concat(_loaders2['default'].SCSS);
+      this.config.module.loaders.concat(_loaders2['default'].SCSS);
       return this;
     }
   }, {
     key: 'iNeedReact',
     value: function iNeedReact() {
-      this.config.loaders.concat(_loaders2['default'].reactES7);
+      this.config.module.loaders.concat(_loaders2['default'].reactES7);
       return this;
     }
   }, {
     key: 'iNeedBootstrap',
     value: function iNeedBootstrap() {
-      this.config.loaders.concat(_loaders2['default'].bootstrap);
+      this.config.module.loaders.concat(_loaders2['default'].bootstrap);
       return this;
     }
   }, {
