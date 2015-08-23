@@ -47,28 +47,30 @@ var WebpackConf = (function () {
   }
 
   _createClass(WebpackConf, [{
+    key: 'addLoaders',
+    value: function addLoaders(loaders) {
+      this.config.module.loaders = this.config.module.loaders.concat(loaders);
+      return this;
+    }
+  }, {
     key: 'iNeedES7',
     value: function iNeedES7() {
-      this.config.module.loaders.concat(_loaders2['default'].ES7);
-      return this;
+      return this.addLoaders(_loaders2['default'].ES7);
     }
   }, {
     key: 'iNeedSCSS',
     value: function iNeedSCSS() {
-      this.config.module.loaders.concat(_loaders2['default'].SCSS);
-      return this;
+      return this.addLoaders(_loaders2['default'].SCSS);
     }
   }, {
     key: 'iNeedReact',
     value: function iNeedReact() {
-      this.config.module.loaders.concat(_loaders2['default'].reactES7);
-      return this;
+      return this.addLoaders(_loaders2['default'].reactES7);
     }
   }, {
     key: 'iNeedBootstrap',
     value: function iNeedBootstrap() {
-      this.config.module.loaders.concat(_loaders2['default'].bootstrap);
-      return this;
+      return this.addLoaders(_loaders2['default'].bootstrap);
     }
   }, {
     key: 'getConfig',

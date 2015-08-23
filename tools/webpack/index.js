@@ -27,24 +27,25 @@ class WebpackConf {
       ]
     }
 
-    iNeedES7() {
-      this.config.module.loaders.concat(loaders.ES7);
+    addLoaders(loaders) {
+      this.config.module.loaders = this.config.module.loaders.concat(loaders);
       return this;
+    }
+
+    iNeedES7() {
+      return this.addLoaders(loaders.ES7);
     }
 
     iNeedSCSS() {
-      this.config.module.loaders.concat(loaders.SCSS);
-      return this;
+      return this.addLoaders(loaders.SCSS);
     }
 
     iNeedReact() {
-      this.config.module.loaders.concat(loaders.reactES7);
-      return this;
+      return this.addLoaders(loaders.reactES7);
     }
 
     iNeedBootstrap() {
-      this.config.module.loaders.concat(loaders.bootstrap);
-      return this;
+      return this.addLoaders(loaders.bootstrap);
     }
 
     getConfig() {
