@@ -65,6 +65,7 @@ class WebpackConf {
 
     iNeedHotDevServer() {
       this.postProcess.push(helpers.hotDevServer);
+      return this;
     }
 
     getConfig() {
