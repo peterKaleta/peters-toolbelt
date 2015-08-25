@@ -1,4 +1,6 @@
 import loaders from './loaders';
+import helpers from './helpers';
+
 import webpack from 'webpack';
 import _ from 'lodash';
 
@@ -24,6 +26,8 @@ class WebpackConf {
       },
       plugins: []
     }
+
+    postProcess: []
 
     addLoaders(loaders) {
       this.config.module.loaders = this.config.module.loaders.concat(loaders);
@@ -59,9 +63,18 @@ class WebpackConf {
       return this.addLoaders(loaders.inlineSVG);
     }
 
+    iNeedHotDevServer() {
+      this.postProcess.push(helpers.hotDevServer);
+    }
+
     getConfig() {
       let conf = _.merge(this.config, this.userConfig);
       conf.plugins.push(new webpack.NoErrorsPlugin());
+
+      _.each(this.postProcess, helper => {
+        conf = helper(conf);
+      });
+
       return conf;
     }
 
