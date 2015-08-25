@@ -14,6 +14,10 @@ var _loaders = require('./loaders');
 
 var _loaders2 = _interopRequireDefault(_loaders);
 
+var _helpers = require('./helpers');
+
+var _helpers2 = _interopRequireDefault(_helpers);
+
 var _webpack = require('webpack');
 
 var _webpack2 = _interopRequireDefault(_webpack);
@@ -89,10 +93,20 @@ var WebpackConf = (function () {
       return this.addLoaders(_loaders2['default'].inlineSVG);
     }
   }, {
+    key: 'iNeedHotDevServer',
+    value: function iNeedHotDevServer() {
+      this.postProcess.push(_helpers2['default'].hotDevServer);
+    }
+  }, {
     key: 'getConfig',
     value: function getConfig() {
       var conf = _lodash2['default'].merge(this.config, this.userConfig);
       conf.plugins.push(new _webpack2['default'].NoErrorsPlugin());
+
+      _lodash2['default'].each(this.postProcess, function (helper) {
+        conf = helper(conf);
+      });
+
       return conf;
     }
   }]);
