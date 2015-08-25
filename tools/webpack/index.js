@@ -27,7 +27,7 @@ class WebpackConf {
       plugins: []
     }
 
-    postProcess: []
+    postProcess = []
 
     addLoaders(loaders) {
       this.config.module.loaders = this.config.module.loaders.concat(loaders);
