@@ -46,6 +46,7 @@ var WebpackConf = (function () {
       },
       plugins: []
     };
+    this.postProcess = [];
 
     this.userConfig = config;
   }
