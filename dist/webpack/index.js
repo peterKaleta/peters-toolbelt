@@ -97,6 +97,7 @@ var WebpackConf = (function () {
     key: 'iNeedHotDevServer',
     value: function iNeedHotDevServer() {
       this.postProcess.push(_helpers2['default'].hotDevServer);
+      return this;
     }
   }, {
     key: 'getConfig',
