@@ -38,6 +38,10 @@ var WebpackConf = (function () {
       module: {
         loaders: []
       },
+      resolve: {
+        alias: {},
+        extensions: []
+      },
       node: {
         net: 'empty',
         tls: 'empty',
@@ -49,6 +53,7 @@ var WebpackConf = (function () {
     this.postProcess = [];
 
     this.userConfig = config;
+    this._config = _lodash2['default'].clone(this.config);
   }
 
   _createClass(WebpackConf, [{
@@ -64,6 +69,12 @@ var WebpackConf = (function () {
       return this;
     }
   }, {
+    key: 'addExtensions',
+    value: function addExtensions(extensions) {
+      extensions = _lodash2['default'].isArray(extensions) ? extensions : [extensions];
+      this._config.resolve.extensions = this._config.resolve.extensions.concat(extensions);
+    }
+  }, {
     key: 'iNeedES7',
     value: function iNeedES7() {
       return this.addLoaders(_loaders2['default'].ES7);
@@ -76,6 +87,7 @@ var WebpackConf = (function () {
   }, {
     key: 'iNeedReact',
     value: function iNeedReact() {
+      this.addExtensions(['', '.jsx', 'js']);
       return this.addLoaders(_loaders2['default'].reactES7);
     }
   }, {
@@ -102,7 +114,7 @@ var WebpackConf = (function () {
   }, {
     key: 'getConfig',
     value: function getConfig() {
-      var conf = _lodash2['default'].merge(this.config, this.userConfig);
+      var conf = _lodash2['default'].merge(this.config, this.userConfig, this._config);
       conf.plugins.push(new _webpack2['default'].NoErrorsPlugin());
 
       _lodash2['default'].each(this.postProcess, function (helper) {

@@ -8,6 +8,7 @@ class WebpackConf {
 
     constructor(config) {
       this.userConfig = config;
+      this._config = _.clone(this.config);
     }
 
     config = {
@@ -17,6 +18,10 @@ class WebpackConf {
       },
       module: {
         loaders: []
+      },
+      resolve: {
+        alias: {},
+        extensions: []
       },
       node: {
         net: 'empty',
@@ -39,6 +44,11 @@ class WebpackConf {
       return this;
     }
 
+    addExtensions(extensions) {
+      extensions = _.isArray(extensions) ? extensions : [extensions];
+      this._config.resolve.extensions = this._config.resolve.extensions.concat(extensions);
+    }
+
     iNeedES7() {
       return this.addLoaders(loaders.ES7);
     }
@@ -48,6 +58,7 @@ class WebpackConf {
     }
 
     iNeedReact() {
+      this.addExtensions(['', '.jsx', 'js']);
       return this.addLoaders(loaders.reactES7);
     }
 
@@ -69,7 +80,7 @@ class WebpackConf {
     }
 
     getConfig() {
-      let conf = _.merge(this.config, this.userConfig);
+      let conf = _.merge(this.config, this.userConfig, this._config);
       conf.plugins.push(new webpack.NoErrorsPlugin());
 
       _.each(this.postProcess, helper => {
