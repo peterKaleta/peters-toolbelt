@@ -18,17 +18,17 @@
   "homepage": "https://github.com/peterKaleta/peters-toolbelt#readme",
   "dependencies": {
     "lodash": "^3.10.1",
-    "webpack": "^1.11.0",
+    "webpack": "^1.12.1",
     "chai": "^3.2.0",
-    "eslint": "^1.2.1",
+    "eslint": "^1.3.1",
     "html-webpack-plugin": "^1.6.1",
-    "mocha": "^2.2.5",
+    "mocha": "^2.3.0",
     "mocha-babel": "^3.0.0"
   },
   "devDependencies": {
-    "babel": "^5.8.21",
-    "babel-core": "^5.8.22",
-    "babel-eslint": "^4.0.10",
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
+    "babel-eslint": "^4.1.1",
     "babel-loader": "^5.3.2",
     "babel-runtime": "^5.8.20",
     "path": "^0.11.14"
