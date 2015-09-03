@@ -58,7 +58,7 @@ class WebpackConf {
     }
 
     iNeedReact() {
-      this.addExtensions(['', '.jsx', 'js']);
+      this.addExtensions(['', '.jsx', '.js']);
       return this.addLoaders(loaders.reactES7);
     }
 

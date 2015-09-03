@@ -87,7 +87,7 @@ var WebpackConf = (function () {
   }, {
     key: 'iNeedReact',
     value: function iNeedReact() {
-      this.addExtensions(['', '.jsx', 'js']);
+      this.addExtensions(['', '.jsx', '.js']);
       return this.addLoaders(_loaders2['default'].reactES7);
     }
   }, {
