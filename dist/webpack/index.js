@@ -91,8 +91,14 @@ var WebpackConf = (function () {
       return this.addLoaders(_loaders2['default'].reactES7);
     }
   }, {
+    key: 'iNeedWebFonts',
+    value: function iNeedWebFonts() {
+      return this.addLoaders(_loaders2['default'].webfonts);
+    }
+  }, {
     key: 'iNeedBootstrap',
     value: function iNeedBootstrap() {
+      this.iNeedWebFonts();
       return this.addLoaders(_loaders2['default'].bootstrap);
     }
   }, {
