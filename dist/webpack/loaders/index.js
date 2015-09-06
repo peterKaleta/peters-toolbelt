@@ -30,6 +30,10 @@ var _inlineSVG = require('./inlineSVG');
 
 var _inlineSVG2 = _interopRequireDefault(_inlineSVG);
 
+var _webfonts = require('./webfonts');
+
+var _webfonts2 = _interopRequireDefault(_webfonts);
+
 exports['default'] = {
   reactES7: _reactES72['default'],
   bootstrap: _bootstrap2['default'],
@@ -37,6 +41,6 @@ exports['default'] = {
   ES7: _ES72['default'],
   images: _images2['default'],
   inlineSVG: _inlineSVG2['default'],
-  webfonts: webfonts
+  webfonts: _webfonts2['default']
 };
 module.exports = exports['default'];

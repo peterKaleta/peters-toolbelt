@@ -4,6 +4,7 @@ import SCSS from './scss';
 import ES7 from './ES7';
 import images from './images';
 import inlineSVG from './inlineSVG';
+import webfonts from './webfonts';
 
 export default {
   reactES7,
