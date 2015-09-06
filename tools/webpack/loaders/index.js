@@ -11,5 +11,6 @@ export default {
   SCSS,
   ES7,
   images,
-  inlineSVG
+  inlineSVG,
+  webfonts
 };

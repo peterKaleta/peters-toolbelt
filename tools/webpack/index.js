@@ -62,7 +62,12 @@ class WebpackConf {
       return this.addLoaders(loaders.reactES7);
     }
 
+    iNeedWebFonts() {
+      return this.addLoaders(loaders.webfonts);
+    }
+
     iNeedBootstrap() {
+      this.iNeedWebFonts();
       return this.addLoaders(loaders.bootstrap);
     }
 
