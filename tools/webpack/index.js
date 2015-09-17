@@ -1,7 +1,5 @@
 import loaders from './loaders';
 import helpers from './helpers';
-
-import webpack from 'webpack';
 import _ from 'lodash';
 
 class WebpackConf {
@@ -86,7 +84,6 @@ class WebpackConf {
 
     getConfig() {
       let conf = _.merge(this.config, this.userConfig, this._config);
-      conf.plugins.push(new webpack.NoErrorsPlugin());
 
       _.each(this.postProcess, helper => {
         conf = helper(conf);
