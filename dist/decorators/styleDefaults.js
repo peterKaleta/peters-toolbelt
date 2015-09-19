@@ -12,6 +12,8 @@ var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_a
 
 exports['default'] = styleDefaults;
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
@@ -22,12 +24,14 @@ var _lodash = require('lodash');
 
 var _react = require('react');
 
+var _react2 = _interopRequireDefault(_react);
+
 function styleDefaults() {
   var defaultStyles = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
   return function (DecoratedComponent) {
-    return (function (_Component) {
-      _inherits(StyledComponent, _Component);
+    return (function (_React$Component) {
+      _inherits(StyledComponent, _React$Component);
 
       function StyledComponent() {
         _classCallCheck(this, StyledComponent);
@@ -46,12 +50,12 @@ function styleDefaults() {
 
           styles = (0, _lodash.extend)({}, defaultStyles, styles);
 
-          return React.createElement(_react.Component, _extends({}, restProps, { styles: styles }));
+          return _react2['default'].createElement(Component, _extends({}, restProps, { styles: styles }));
         }
       }]);
 
       return StyledComponent;
-    })(_react.Component);
+    })(_react2['default'].Component);
   };
 }
 
