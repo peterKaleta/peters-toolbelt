@@ -6,12 +6,12 @@ Object.defineProperty(exports, '__esModule', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _StyleDefaults = require('./StyleDefaults');
+var _styleDefaults = require('./styleDefaults');
 
-var _StyleDefaults2 = _interopRequireDefault(_StyleDefaults);
+var _styleDefaults2 = _interopRequireDefault(_styleDefaults);
 
 exports['default'] = {
-  StyleDefaults: _StyleDefaults2['default']
+  StyleDefaults: _styleDefaults2['default']
 };
 module.exports = exports['default'];
 'use strict';
@@ -405,18 +405,3 @@ exports['default'] = [{
   loader: 'url?limit=8192&mimetype=image/svg+xml&name=images/[hash].[ext]'
 }];
 module.exports = exports['default'];
-'use strict';
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _ = require('./');
-
-var _2 = _interopRequireDefault(_);
-
-var _chai = require('chai');
-
-describe('webpack', function () {
-  it('exists', function () {
-    (0, _chai.expect)(_2['default']).to.exist;
-  });
-});

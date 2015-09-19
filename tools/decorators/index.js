@@ -1,4 +1,4 @@
-import StyleDefaults from './StyleDefaults';
+import StyleDefaults from './styleDefaults';
 
 export default {
   StyleDefaults
