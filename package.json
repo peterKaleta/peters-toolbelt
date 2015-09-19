@@ -1,6 +1,6 @@
 {
   "name": "peters-toolbelt",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "some common configurations",
   "main": "dist/index.js",
   "scripts": {
