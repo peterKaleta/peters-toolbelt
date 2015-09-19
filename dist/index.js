@@ -414,3 +414,9 @@ var _ = require('./');
 var _2 = _interopRequireDefault(_);
 
 var _chai = require('chai');
+
+describe('webpack', function () {
+  it('exists', function () {
+    (0, _chai.expect)(_2['default']).to.exist;
+  });
+});
