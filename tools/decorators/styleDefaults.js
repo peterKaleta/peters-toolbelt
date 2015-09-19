@@ -11,7 +11,7 @@ export default function styleDefaults(defaultStyles = {}) {
           let { styles = {}, ...restProps } = this.props;
           styles = extend({}, defaultStyles, styles);
 
-          return <Component {...restProps} styles={styles} />;
+          return <DecoratedComponent {...restProps} styles={styles} />;
 
        }
 
