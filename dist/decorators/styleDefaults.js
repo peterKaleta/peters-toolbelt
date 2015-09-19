@@ -50,7 +50,7 @@ function styleDefaults() {
 
           styles = (0, _lodash.extend)({}, defaultStyles, styles);
 
-          return _react2['default'].createElement(Component, _extends({}, restProps, { styles: styles }));
+          return _react2['default'].createElement(DecoratedComponent, _extends({}, restProps, { styles: styles }));
         }
       }]);
 
