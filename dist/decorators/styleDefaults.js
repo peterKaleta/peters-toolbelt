@@ -10,7 +10,7 @@ exports['default'] = function () {
   var styles = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
   return function (Component) {
-    Component.defaultProps = (0, _lodash.extend)({}, { styles: styles }, Component.defaultProps);
+    Component.defaultProps = (0, _lodash.extend)({}, { style: styles }, Component.defaultProps);
     return Component;
   };
 };
