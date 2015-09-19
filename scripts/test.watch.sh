@@ -5,4 +5,4 @@ export NODE_ENV=testing
   --watch \
   --reporter nyan \
   --compilers js:mocha-babel \
-  tools/**/*.spec.js
+  tools/**/spec.js
