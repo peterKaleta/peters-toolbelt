@@ -1,10 +1,10 @@
 import {extend} from 'lodash';
-import {Component} from 'react';
+import React from 'react';
 
 export default function styleDefaults(defaultStyles = {}) {
 
   return function (DecoratedComponent) {
-    return class StyledComponent extends Component {
+    return class StyledComponent extends React.Component {
 
       render() {
 
